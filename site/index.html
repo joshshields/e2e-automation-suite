@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Automation Practice</title>
+  <link href="styles.css" rel="stylesheet" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (username === "admin" && password === "1234") {
+        message.textContent = "Login successful!";
+        message.className = "success";
+        
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 3000); // delay
+      } else {
+        message.textContent = "Invalid credentials.";
+        message.className = "error";
+      }
+    });
+  </script>
+</body>
+</html>
