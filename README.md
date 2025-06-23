@@ -63,4 +63,4 @@ npx playwright test
 ## 👤 Author
 
 **Your Name**  
-GitHub: [@yourusername](https://github.com/joshshields)
+GitHub: [@joshshields](https://github.com/joshshields)
