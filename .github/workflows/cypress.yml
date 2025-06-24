@@ -1,0 +1,36 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd cypress-tests
+          npm ci
+
+      - name: Serve site
+        run: |
+          npm install -g http-server
+          http-server site -p 51515 &
+          npx wait-on http://127.0.0.1:51515/site
+
+      - name: Run Cypress tests
+        run: |
+          cd cypress-tests
+          npx cypress run
