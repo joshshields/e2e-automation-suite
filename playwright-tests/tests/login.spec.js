@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('successful login', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5500/site/');
+  await page.goto('http://127.0.0.1:51515/site/');
 
   await page.fill('#username', 'admin');
   await page.fill('#password', '1234');
@@ -13,7 +13,7 @@ test('successful login', async ({ page }) => {
 });
 
 test('failed login with wrong credentials', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5500/site/');
+  await page.goto('http://127.0.0.1:51515/site/');
 
   await page.fill('#username', 'wronguser');
   await page.fill('#password', 'wrongpass');
@@ -25,7 +25,7 @@ test('failed login with wrong credentials', async ({ page }) => {
 });
 
 test('failed login with wrong password', async ({ page }) =>{
-  await page.goto('http://127.0.1:5500/site/');
+  await page.goto('http://127.0.1:51515/site/');
 
   await page.fill('#username', 'admin');
   await page.fill('#password', 'ajsdjksad');
@@ -33,7 +33,7 @@ test('failed login with wrong password', async ({ page }) =>{
 });
 
 test('redirects to dashboard after successful login', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5500/site/');
+  await page.goto('http://127.0.0.1:51515/site/');
 
   await page.fill('#username', 'admin');
   await page.fill('#password', '1234');
