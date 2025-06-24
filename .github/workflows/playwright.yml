@@ -28,8 +28,10 @@ jobs:
 
       - name: Serve site
         run: |
-          http-server site -p 51515 &
-          npx wait-on http://127.0.0.1:51515
+          npm install -g http-server
+          http-server . -p 51515 &
+          npx wait-on http://127.0.0.1:51515/site
+
 
       - name: Run Playwright tests
         run: |
