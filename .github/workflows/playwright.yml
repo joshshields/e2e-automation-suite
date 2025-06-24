@@ -27,6 +27,7 @@ jobs:
       
       - name: Serve site
         run: |
+          cd /home/runner/work/test-automation-prep/test-automation-prep/site
           npm install -g http-server
           http-server ./site -p 51515 &
           sleep 3
