@@ -24,14 +24,6 @@ test('failed login with wrong credentials', async ({ page }) => {
   await expect(message).toHaveClass(/error/);
 });
 
-test('failed login with wrong password', async ({ page }) =>{
-  await page.goto('http://127.0.1:51515/site/');
-
-  await page.fill('#username', 'admin');
-  await page.fill('#password', 'ajsdjksad');
-
-});
-
 test('redirects to dashboard after successful login', async ({ page }) => {
   await page.goto('http://127.0.0.1:51515/site/');
 
