@@ -1,6 +1,6 @@
-# 🧪 Test Automation Practice Project
+# 🧪 Test Automation Project
 
-A beginner-friendly test automation project to simulate and verify user interactions using Playwright. The goal is to demonstrate core testing concepts and workflows using a static login site.
+A beginner-friendly test automation project to simulate and verify user interactions using Playwright. My goal is to demonstrate core testing concepts and workflows using a static login site.
 
 ---
 
@@ -62,6 +62,4 @@ npx playwright test
 ---
 
 ## 👤 Author
-
-**Your Name**  
 GitHub: [@joshshields](https://github.com/joshshields)
