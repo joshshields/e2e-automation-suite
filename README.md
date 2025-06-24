@@ -38,6 +38,7 @@ Make sure the site is running (see above), then in a new terminal:
 cd playwright-tests
 npx playwright test
 ```
+![Playwright Tests](https://github.com/joshshields/test-automation-prep/actions/workflows/playwright.yml/badge.svg)
 
 ---
 
@@ -50,8 +51,6 @@ npx playwright test
 - 🧾 Visual message feedback (error/success)
 
 ---
-
-## ![Playwright Tests](https://github.com/joshshields/test-automation-prep/actions/workflows/playwright.yml/badge.svg)
 
 ## 📌 Future Plans
 
