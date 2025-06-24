@@ -24,7 +24,13 @@ jobs:
           cd playwright-tests
           npm ci
           npx playwright install --with-deps
-
+      
+      - name: Serve site
+        run: |
+          npm install -g http-server
+          http-server ./site -p 51515 &
+          sleep 3
+      
       - name: Run Playwright tests
         run: |
           cd playwright-tests
