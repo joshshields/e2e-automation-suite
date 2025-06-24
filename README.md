@@ -52,7 +52,7 @@ npx playwright test
 ---
 
 ## ![Playwright Tests]
-(https://github.com/<your-username>/<your-repo-name>/actions/workflows/playwright.yml/badge.svg)
+(https://github.com/<joshshields>/<test-automation-prep>/actions/workflows/playwright.yml/badge.svg)
 
 ## 📌 Future Plans
 
