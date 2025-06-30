@@ -1,6 +1,6 @@
-# 🧪 Test Automation Project
+# 🔧 E2E Automation Suite
 
-A beginner-friendly test automation project to simulate and verify user interactions using Playwright. My goal is to demonstrate core testing concepts and workflows using a static login site.
+A cross-framework test automation suite demonstrating Playwright, Cypress, and Selenium through end-to-end browser testing. Built to showcase tool comparisons, modern testing practices, and full-stack developer workflow readiness.
 
 ---
 
