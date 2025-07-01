@@ -30,15 +30,9 @@ Then open in your browser:
 
 ---
 
-## ✅ Running the Playwright Tests
-
-Make sure the site is running (see above), then in a new terminal:
-
-```bash
-cd playwright-tests
-npx playwright test
-```
-![Playwright Tests](https://github.com/joshshields/test-automation-prep/actions/workflows/playwright.yml/badge.svg)
+## ✅ Successfull Tests
+![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)
+![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)
 
 ---
 
