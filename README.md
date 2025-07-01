@@ -30,9 +30,8 @@ Then open in your browser:
 
 ---
 
-## ✅ Successfull Tests
-![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)
-![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)
+## ✅ Successful Tests
+![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)<br>![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)
 
 ---
 
