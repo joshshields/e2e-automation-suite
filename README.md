@@ -1,4 +1,4 @@
-# 🔧 E2E Automation Suite
+# 🔧 E2E Login + Auth Flow with Multi-Framework Testing
 
 A cross-framework test automation suite demonstrating Playwright, Cypress, and Selenium through end-to-end browser testing. Built to showcase tool comparisons, modern testing practices, and full-stack developer workflow readiness.
 
