@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  selenium-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,9 +29,9 @@ jobs:
 
       - name: Serve site
         run: |
-          npm install -g http-server
+          npm install -g http-server wait-on
           http-server site -p 51515 &
-          npx wait-on http://127.0.0.1:51515
+          npx wait-on http://127.0.0.1:51515/index.html
 
       - name: Run Selenium test
         run: |
