@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dashboard</title>
+  <script>
+    if (!localStorage.getItem("isAuthenticated")) {
+      window.location.href = "index.html";
+    }
+  </script>
 </head>
 <body>
   <h1>Welcome to your dashboard</h1>
