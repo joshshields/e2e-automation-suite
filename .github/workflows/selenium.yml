@@ -31,7 +31,7 @@ jobs:
         run: |
           npm install -g http-server
           http-server site -p 51515 &
-          npx wait-on http://127.0.0.1:51515/site
+          npx wait-on http://127.0.0.1:51515
 
       - name: Run Selenium test
         run: |
