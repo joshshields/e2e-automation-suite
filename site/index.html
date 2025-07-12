@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Automation Practice</title>
   <link href="styles.css" rel="stylesheet" />
-
 </head>
 <body>
   <div class="container">
@@ -30,12 +29,13 @@
       const message = document.getElementById("message");
 
       if (username === "admin" && password === "1234") {
+        localStorage.setItem("isAuthenticated", "true");
         message.textContent = "Login successful!";
         message.className = "success";
-        
+
         setTimeout(() => {
           window.location.href = "dashboard.html";
-        }, 1000); // delay
+        }, 1000);
       } else {
         message.textContent = "Invalid credentials.";
         message.className = "error";
