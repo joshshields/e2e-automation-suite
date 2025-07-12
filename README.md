@@ -14,7 +14,7 @@ test-automation-practice/
 ```
 
 ## ✅ Successful Tests
-![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)<br>![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)
+![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)<br>![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)<br>![Selenium Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/selenium.yml/badge.svg)
 
 ---
 
