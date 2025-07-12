@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  playwright-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,10 +28,8 @@ jobs:
 
       - name: Serve site
         run: |
-          npm install -g http-server
-          http-server . -p 51515 &
-          npx wait-on http://127.0.0.1:51515/site
-
+          http-server site -p 51515 &
+          npx wait-on http://127.0.0.1:51515/index.html
 
       - name: Run Playwright tests
         run: |
