@@ -17,7 +17,7 @@ describe('Auth Flow', () => {
       win.localStorage.clear();
     });
 
-    // Attempt to access dashboard again
+    // Attempt to access dashboard again (without setting login)
     cy.visit('http://localhost:51515/dashboard.html');
     cy.url().should('include', 'index.html');
   });
