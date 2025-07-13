@@ -1,30 +1,38 @@
-# 🔧 E2E Login + Auth Flow with Multi-Framework Testing
+# E2E Login + Auth Flow  
+**Multi-Framework Browser Testing**  
 
-A cross-framework test automation suite demonstrating Playwright, Cypress, and Selenium through end-to-end browser testing. Built to showcase tool comparisons, modern testing practices, and full-stack developer workflow readiness.
-
----
-
-## 📁 Project Structure
-
-```
-test-automation-practice/
-├── site/              # Static login site (HTML, CSS, JS)
-├── playwright-tests/  # Playwright test suite
-├── cypress-tests/     # Cypress test suite
-```
-
-## ✅ Successful Tests
-![Playwright Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/playwright.yml/badge.svg)<br>![Cypress Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/cypress.yml/badge.svg)<br>![Selenium Tests](https://github.com/joshshields/e2e-automation-suite/actions/workflows/selenium.yml/badge.svg)
+This project runs end-to-end tests against a static login system using three major test frameworks: **Playwright**, **Cypress**, and **Selenium**. It covers core authentication flows and compares real-world test runner behaviors side-by-side.
 
 ---
 
-## 🔬 Features Tested
+## Structure  
 
-- ✅ Successful login with correct credentials
-- ❌ Failed login with invalid credentials
-- 🛑 Blocked submission on empty fields
-- 🔁 Redirect to dashboard after success
-- 🧾 Visual message feedback (error/success)
+```
+e2e-login-plus-auth-flow/
+├── site/                static HTML/CSS/JS login + dashboard pages
+├── playwright-tests/    Playwright test suite
+├── cypress-tests/       Cypress test suite
+├── selenium-tests/      Selenium test suite
+```
 
-## 👤 Author
-GitHub: [@joshshields](https://github.com/joshshields)
+---
+
+## Test Coverage  
+
+- Login form visibility  
+- Valid login → dashboard redirect  
+- Invalid login → error message  
+- Auth check → redirect unauthenticated users  
+- Logout clears session and redirects  
+
+---
+
+## Status  
+
+![Playwright Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/playwright.yml/badge.svg)  
+![Cypress Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/cypress.yml/badge.svg)  
+![Selenium Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/selenium.yml/badge.svg)
+
+---
+
+[GitHub → @joshshields](https://github.com/joshshields)
