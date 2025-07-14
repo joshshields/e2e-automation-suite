@@ -8,12 +8,12 @@ describe('Password Reset', () => {
   it('should show error for unknown user', () => {
     cy.visit('http://localhost:51515/reset.html', {
       onBeforeLoad(win) {
-        // Preload localStorage with a different user
         win.localStorage.setItem("users", JSON.stringify({ someuser: "pass" }));
       },
     });
     cy.get('#username').type('notregistered');
     cy.get('button[type="submit"]').click();
+    cy.wait(200);
     cy.get('#message').should('contain', 'Username not found.');
   });
 
@@ -25,6 +25,7 @@ describe('Password Reset', () => {
     });
     cy.get('#username').type('resetuser');
     cy.get('button[type="submit"]').click();
+    cy.wait(200);
     cy.get('#message').should('contain', 'Password reset successful!');
   });
 });
