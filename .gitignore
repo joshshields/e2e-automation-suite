@@ -1,0 +1,23 @@
+# Cypress
+cypress-tests/cypress/screenshots/
+cypress-tests/cypress/videos/
+
+# Playwright
+playwright-tests/test-results/
+playwright-tests/screenshots/
+playwright-tests/videos/
+
+# Selenium (optional)
+selenium-tests/screenshots/
+selenium-tests/reports/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# System
+.DS_Store
+
+# General
+*.log
+*.tmp
