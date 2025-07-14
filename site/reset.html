@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Password</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Reset Password</h1>
+    <form id="resetForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="newPassword">New Password</label>
+      <input type="password" id="newPassword" name="newPassword" required />
+
+      <button type="submit">Reset Password</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("resetForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const newPassword = document.getElementById("newPassword").value;
+      const message = document.getElementById("message");
+
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if (users[username]) {
+        users[username] = newPassword;
+        localStorage.setItem("users", JSON.stringify(users));
+        message.textContent = "Password reset successful!";
+        message.className = "success";
+      } else {
+        message.textContent = "Username not found.";
+        message.className = "error";
+      }
+    });
+  </script>
+</body>
+</html>

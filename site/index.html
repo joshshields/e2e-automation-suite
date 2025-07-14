@@ -20,7 +20,6 @@
       <p id="message"></p>
     </form>
   </div>
-
   <script>
     document.getElementById("loginForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -28,11 +27,15 @@
       const password = document.getElementById("password").value;
       const message = document.getElementById("message");
 
-      if (username === "admin" && password === "1234") {
+      const users = JSON.parse(localStorage.getItem("users")) || {};
+
+      const isAdmin = username === "admin" && password === "1234";
+      const isRegistered = users[username] && users[username] === password;
+
+      if (isAdmin || isRegistered) {
         localStorage.setItem("isAuthenticated", "true");
         message.textContent = "Login successful!";
         message.className = "success";
-
         setTimeout(() => {
           window.location.href = "dashboard.html";
         }, 1000);
