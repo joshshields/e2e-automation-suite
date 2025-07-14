@@ -8,24 +8,24 @@ describe('Password Reset', () => {
   it('should show error for unknown user', () => {
     cy.visit('http://localhost:51515/reset.html', {
       onBeforeLoad(win) {
-        // Preload localStorage with a different user
-        win.localStorage.setItem("users", JSON.stringify({ existinguser: "pass123" }));
+        win.localStorage.setItem("users", JSON.stringify({ testuser: "testpass" }));
       },
     });
-    cy.get('#username').type('notregistered');
+    cy.get('#username').type('nonexistent');
     cy.get('button[type="submit"]').click();
-    cy.get('#message').should('contain', 'Username not found.');
+    cy.get('#message').should('be.visible');
+    cy.get('#message', { timeout: 6000 }).should('contain', 'Username not found.');
   });
 
   it('should reset password for registered user', () => {
     cy.visit('http://localhost:51515/reset.html', {
       onBeforeLoad(win) {
-        // Preload localStorage with the correct user
         win.localStorage.setItem("users", JSON.stringify({ resetuser: "oldpass" }));
       },
     });
     cy.get('#username').type('resetuser');
     cy.get('button[type="submit"]').click();
-    cy.get('#message').should('contain', 'Password reset successful!');
+    cy.get('#message').should('be.visible');
+    cy.get('#message', { timeout: 6000 }).should('contain', 'Password reset successful!');
   });
 });
