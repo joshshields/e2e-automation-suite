@@ -29,9 +29,10 @@ e2e-login-plus-auth-flow/
 
 ## Status  
 
-![Playwright Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/playwright.yml/badge.svg)  
-![Cypress Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/cypress.yml/badge.svg)  
-![Selenium Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/selenium.yml/badge.svg)
+![Playwright Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/playwright.yml/badge.svg?branch=stable-display)  
+![Cypress Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/cypress.yml/badge.svg?branch=stable-display)  
+![Selenium Tests](https://github.com/joshshields/e2e-login-plus-auth-flow/actions/workflows/selenium.yml/badge.svg?branch=stable-display)
+
 
 ---
 
