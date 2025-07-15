@@ -2,9 +2,13 @@ name: Cypress Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - stable-display
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - stable-display
 
 jobs:
   cypress-run:

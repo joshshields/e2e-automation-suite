@@ -2,9 +2,13 @@ name: Selenium Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - stable-display
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - stable-display
 
 jobs:
   selenium-run:
